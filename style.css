@@ -1,0 +1,23 @@
+.robot{
+  height:400px;
+    width:400px;
+    background-color: lightgray;
+}
+
+.box{
+    height:100px;
+    width:100px;
+    background-color: darkgreen;
+    border: 1px solid white;
+    float:left;
+    margin: 15px;
+    font: bold 85px Arial;
+    color:white;
+    text-align:center;
+
+    
+}
+
+.dont-display{
+  display:none;
+}
