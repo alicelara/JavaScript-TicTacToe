@@ -43,7 +43,7 @@ var check_win = function(){
   
         console.log('Win!!')
       }
-      else if (move_counter===8){
+      else if (move_counter===9){
        $('.robot').toggleClass('dont-display');
        $('.draw-board').text("Tie!!").prepend("<br />").append("<br><a href='tictactoe.html'>Play again?</a>"); 
   
@@ -58,7 +58,10 @@ var check_win = function(){
     //for(var i = 0; i <= 9; i++){
    
     var mark = $(this).attr('id'); //track the id number 
-      
+  if (!isNaN(board[mark])){
+
+  
+
     if((move_counter % 2) === 0){
       $(this).text(player1);
      // console.log(mark);     
@@ -69,9 +72,11 @@ var check_win = function(){
       //console.log(mark);
       board[mark] = player2;
     }
+    move_counter++;
+  }
   //}
     check_win();
     console.log(board);
-    move_counter++;
+    
   });
 });
