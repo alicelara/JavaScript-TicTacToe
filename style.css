@@ -1,23 +1,68 @@
+*{  
+   margin:0;  
+   padding:0;  
+} 
+
+body{
+    background:url(bg.jpg);
+    background-color: black;
+    font-family: 'Indie Flower', cursive;
+    text-shadow: 0 1px 0 rgba(0,0,0,.3); 
+    -webkit-font-smoothing: antialiased;
+
+}
+
+
+#wrapper{   
+   width:465px;  
+   margin: 0 auto;
+
+}
+
+h1{
+    font-size: 75px;
+    text-align: center;
+    padding-left: 30px;
+    line-height: 1.7em;
+    color: white;
+}
 .robot{
-  height:400px;
-    width:400px;
-    background-color: lightgray;
+    background:url(tictacbg.png);
+    width:465px;
+    height: 423px;
+    
+}
+
+.dont-display{
+    display:none;
+}
+  
+
+.draw-board{
+    background-color: transparent;
+    width:465px;
+    height: 423px;
+    font-size: 95px;
+    text-align: center;
+    line-height: 1.2em;
+    color: white;  
+}
+.draw-board a{
+    font-size: 30px;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    line-height: 4em;
+    
 }
 
 .box{
     height:100px;
     width:100px;
-    background-color: darkgreen;
-    border: 1px solid white;
     float:left;
-    margin: 15px;
-    font: bold 85px Arial;
-    color:white;
-    text-align:center;
-
-    
-}
-
-.dont-display{
-  display:none;
+    margin: 40px 0 0 40px;
+    font-size: 85px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
 }

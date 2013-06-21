@@ -13,26 +13,42 @@
     8: 8,
     9: 9    
   };
+
+
   // check that spots 1,2 or 3 are x's or o's
 var check_win = function(){
   for (var i = 1; i <= 7; i+=3) {
       if (board[i] === board[i+1] && board[i+1] === board[i+2])
       {
-        
+       $('.robot').toggleClass('dont-display');
+       $('.draw-board').text("Win!!").prepend("<br />").append("<br><a href='tictactoe.html'>Play again?</a>"); 
+  
         console.log('Win!!')
+
       }
   }
   for (var i = 1; i <= 3; i++) {
       if (board[i] === board[i+3] && board[i+3] === board[i+6])
       {
+       $('.robot').toggleClass('dont-display');
+       $('.draw-board').text("Win!!").prepend("<br />").append("<br><a href='tictactoe.html'>Play again?</a>"); 
+  
         console.log('Win!!')
       }
   }
   if ((board[1] === board[5] && board[5] === board[9]) || (board[3] === board[5] && board[5] === board[7])) 
       {
+       $('.robot').toggleClass('dont-display');
+       $('.draw-board').text("Win!!").prepend("<br />").append("<br><a href='tictactoe.html'>Play again?</a>"); 
+  
         console.log('Win!!')
       }
+      else if (move_counter===8){
+       $('.robot').toggleClass('dont-display');
+       $('.draw-board').text("Tie!!").prepend("<br />").append("<br><a href='tictactoe.html'>Play again?</a>"); 
   
+        } 
+
 };
   
  $(document).ready(function(){
